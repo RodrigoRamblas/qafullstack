@@ -47,3 +47,19 @@ Dado("logado no sistema com usuario valido") do
   Entao("o sistema deve apresentar a msg de data invalida") do
     expect(page).to have_content("*Data Inválida")
   end
+
+#  Quando("eu coloco uma NF com UF inválida") do
+#    click_button("expand_more")
+#    sleep 2
+#    saopaulo = "//div[@class='px-button-select-list ng-star-inserted'][1]/button[@class='mat-menu-item']" 
+#    page.find(:xpath, saopaulo).click
+#    sleep 1
+#    click_button("Entrar")
+#    expect(page).to have_content("Emissão de CT-e")
+#    fill_in("ex: 97898704021218987040212189870402198704021218", options = {:placeholder => 'ex: 97898704021218987040212189870402198704021218', :with => '33181111137051040641550070006673261833446082'}) #NF
+#    fill_in("XX/XX/XXXX", options = {:placeholder => 'XX/XX/XXXX', :with => " "}) #Data
+#    click_button 'Adicionar nota'
+#  end
+#  Entao("O sistema deve validar a nota e informar que é inválida") do
+#    expect(page).to have_content("*Chave NF-e inválida")
+#  end

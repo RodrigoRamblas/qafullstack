@@ -14,3 +14,4 @@ Entao O sistema deve validar a nota por uma algoritmo e deixar a nota ser inseri
 Cenario: Escolher uma data futura
 Quando eu coloco uma data futura
 Entao o sistema deve apresentar a msg de data invalida
+
