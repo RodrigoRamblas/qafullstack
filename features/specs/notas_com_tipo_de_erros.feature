@@ -14,6 +14,6 @@ Dado que eu tenha uma nota errada
 |Código incorreto "85.368.624"          |35-18/11-11.137.051/0406-41-55-007-000.667.326-185.368.624-2|
 |Dígito Verificador incorreto "6"       |35-18/11-11.137.051/0406-41-55-007-000.667.326-183.344.608-6|
 
-Cenario: Colocar uma nota com UF errada
+Cenario: Colocar uma nota errada
 Quando eu coloco uma nota errada
 Entao verifico se foi apresentado mensagem de erro
