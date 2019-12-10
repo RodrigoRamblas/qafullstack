@@ -1,8 +1,5 @@
 Dado("que eu tenha uma nota errada") do |table|                              
-    table.hashes.each do |valor|
-        @nota = valor['Notas'].to_s
-        #puts table.length
-    end
+    @nota = table.rows_hash['Mês incorreto'].to_s
   end                                                                          
                                                                                
   Quando("eu coloco uma nota errada") do
@@ -17,7 +14,6 @@ Dado("que eu tenha uma nota errada") do |table|
     sleep 1
     click_button("Entrar")
     expect(page).to have_content("Emissão de CT-e")
-    puts @nota
     fill_in("ex: 97898704021218987040212189870402198704021218", options = {:placeholder => 'ex: 97898704021218987040212189870402198704021218', :with => @nota}) #NF
     fill_in("XX/XX/XXXX", options = {:placeholder => 'XX/XX/XXXX', :with => " "}) #Data
     click_button 'Adicionar nota'
