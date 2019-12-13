@@ -25,8 +25,9 @@ Quando("eu clico em Declaração") do
   end                                                                          
                                                                                
   Quando("clico em Parametrizações") do                                        
+    sleep 2
     click_button("Parametrizações")
-    sleep 5
+    sleep 2
     sim = "//px-button[@class='px-size-md px-important ng-star-inserted']/button[@class='px-button mat-flat-button mat-primary']/span[@class='mat-button-wrapper']"
     page.find(:xpath, sim).click
     sleep 5
