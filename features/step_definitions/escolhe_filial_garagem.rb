@@ -6,8 +6,8 @@ Dado("xeu estou logado com um usuario valido") do
   end  
 
   Quando("eu escolho a Filial Garagem") do                                      
-    sleep 2
     click_button("expand_more")
+    sleep 2
     saopaulo = "//div[@class='px-button-select-list ng-star-inserted'][1]/button[@class='mat-menu-item']" 
     page.find(:xpath, saopaulo).click
     sleep 1
