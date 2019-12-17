@@ -30,7 +30,7 @@ Quando("eu clico em Declaração") do
     sleep 2
     sim = "//px-button[@class='px-size-md px-important ng-star-inserted']/button[@class='px-button mat-flat-button mat-primary']/span[@class='mat-button-wrapper']"
     page.find(:xpath, sim).click
-    sleep 5
+    sleep 120
 end                                                                          
                                                                                
   Entao("o sistema deve ir para a tela de Parametrizações") do                 
