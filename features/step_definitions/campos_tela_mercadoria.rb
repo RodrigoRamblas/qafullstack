@@ -73,7 +73,6 @@ Quando("eu clico em {string}") do |declaracao|
 end                                                                                                                                     
 
 Quando("em {string} preencho os campos {string}, {string}, {string}, {string}") do |dados_da_cubagem, volume, altura, largura, profundidade|
-
     volume = 'mat-input-70'
     altura = 'mat-input-71'
     largura = 'mat-input-72'
