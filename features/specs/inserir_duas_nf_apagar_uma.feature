@@ -3,7 +3,7 @@
 @Inserir_duas_nf_apagar_uma
 Funcionalidade: Inserir duas notas e apagar uma
 Contexto: 
-Dado estou logado no sistema com usuario valido
+Dado eu estou logado com um usuario valido
 
 
 Cenario: Inserir duas NF e apagar uma

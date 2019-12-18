@@ -3,7 +3,7 @@
 @cliente_inativo
 Funcionalidade: Validar cliente
 Contexto: 
-Dado xeu estou logado com um usuario valido
+Dado eu estou logado com um usuario valido
 
 Cenario: Validar msg de usuario inativo
 Quando eu coloco um usuario inativo

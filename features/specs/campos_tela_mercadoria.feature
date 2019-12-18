@@ -3,7 +3,7 @@
 @Campos_tela_mercadoria
 Funcionalidade: Verificar os campos a tela de mercadoria
 Contexto: 
-Dado xeu estou logado com um usuario valido
+Dado eu estou logado com um usuario valido
 
 Cenario: Verificar se estão visiveis os campos de tela Mercadoria
 Quando eu clico em "Declaração"

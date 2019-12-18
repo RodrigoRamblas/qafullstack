@@ -3,11 +3,11 @@
 @Inserir_nf_mudar_aba_declaracao
 Funcionalidade: Inserir uma nota e mudar para aba de declacao
 Contexto: 
-Dado estou logado sistema com usuario valido
-
+Dado eu estou logado com um usuario valido
+Dado eu coloco a nota fiscal Valida na tela
 
 Cenario: Inserir uma nota e mudar para aba de declacao
-Quando eu coloco uam nota e mudo para a aba de declaracao
+Quando eu coloco uma nota e mudo para a aba de declaracao
 Entao o sistema deve validar que já existe uma nota inserida e informar que ao alterar a aba os dados serão perdidos
 
 Cenario: Inserir uma nota e mudar para aba de declacao e clicar em Sim

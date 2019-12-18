@@ -1,4 +1,4 @@
-Dado("xeu estou logado com um usuario valido") do                             
+Dado("eu estou logado com um usuario valido") do                             
     visit 'http://localhost:90/#/login'
     find(id:"mat-input-0").set "testes"
     find(id:"mat-input-1").set "bgm123456"

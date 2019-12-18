@@ -1,9 +1,10 @@
 #language: pt
 
-@Inserir_nota_mais_de_uma_vez
+@inserir_nota_mais_de_uma_vez
 Funcionalidade: Inserir nota mais de uma vez
 Contexto: 
-Dado que estou logado no sistema com usuario valido
+Dado eu estou logado com um usuario valido
+Dado eu coloco a nota fiscal Valida na tela
 
 @Inserir_nota_2
 Cenario: Inserir a NF mais de uma vez

@@ -1,9 +1,10 @@
 #language: pt
 
-@Inserir_nota_com_remetente_diferente
+@inserir_nota_com_remetente_diferente
 Funcionalidade: Inserir nota com remetente diferente
 Contexto: 
-Dado que eu estou logado no sistema com usuario valido
+Dado eu estou logado com um usuario valido
+Dado eu coloco a nota fiscal Valida na tela
 
 @Inserir_nota_remetente_diferente
 Cenario: Inserir a NF com remetente diferente

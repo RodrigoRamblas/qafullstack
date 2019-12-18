@@ -3,7 +3,7 @@
 @Declaracao_cpf_limpa_campo
 Funcionalidade: Verificar se os campos foram limpos após trocar o CPF
 Contexto: 
-Dado xeu estou logado com um usuario valido
+Dado eu estou logado com um usuario valido
 
 Cenario: Verificar se limpou os campo remetente
 Quando em remetente eu coloco outro CPF 

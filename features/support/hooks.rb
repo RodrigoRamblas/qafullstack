@@ -1,4 +1,4 @@
 Before do
-    puts 'XXXXXXX Estou abrindo o site.'
+    puts '|-> Estou abrindo o site.'
     #@acessando_url
 end
