@@ -62,7 +62,7 @@ Quando("eu coloco um usuario inativo") do
     expect(page).should have_no_xpath("//button[@id='mat-button-toggle-4-button' and @disabled]")
   end
   
-  Quando("eu coloco um remetente ativo e um destinatario ativo e um expedidor inativo") do                                                
+  Quando("eu coloco um remetente ativo e um destinatario ativo e um expedidor inativo") do    
     click_button 'Entrar' #Btn Entrar da tela Selecione Filial/Garagem
     nota = '35190543648971000155550050006365241050820173'
     remetente_ok = "48335762600"
@@ -89,7 +89,7 @@ Quando("eu coloco um usuario inativo") do
     expect(page).should have_no_xpath("//div[@class='dialog-content']/p")
   end
   
-  Quando("eu coloco um remetente ativo que tenha msg") do
+  Quando("eu coloco um remetente ativo que tenha msg") do                                          
     click_button 'Entrar' #Btn Entrar da tela Selecione Filial/Garagem
     nota = '35190543648971000155550050006365241050820173'
     remetente_ok = '66425133000118' #msg de 5 erros
@@ -205,7 +205,8 @@ Entao("o cliente deve ser inserido sem alteração nos campos de Prestação de 
   expect(page).to have_content("BARBACENA - MG")           
 end                                                                                                                                                          
 
-Quando("eu coloco o Redespacho depois do cliente inserido Expedidor inserido") do                                          
+Quando("eu coloco o Redespacho depois do cliente inserido Expedidor inserido") do
+  sleep 3                                         
   click_button 'Entrar' 
   nota = '35190543648971000155550050006365241050820173'
   remetente_ok = "33224031816"
@@ -232,3 +233,198 @@ end
 Entao("o componente deve sobrescrever a localidade inserida anteriormente no expedidor e validar a praça e se está ativo") do
   expect(page).to have_content("Redespachante/Tomador")                                               
 end                                                                                                                          
+
+Quando("eu coloco um CEP com localidade não atendida associada no Redespacho") do                           
+  click_button 'Entrar' 
+  nota = '35190543648971000155550050006365241050820173'
+  remetente_ok = "33224031816"
+  destinatario_ok = "06068962601"
+  redespachante_tomador_ok = "66224063672"
+  placeholder = 'ex: 97898704021218987040212189870402198704021218'
+  data = 'XX/XX/XXXX'
+  cep_nok = '36033640'                                                                                                          
+  fill_in(placeholder, options = {:placeholder => placeholder, :with => nota}) #NF
+  fill_in(data, options = {:placeholder => data, :with => ' '}) #Data
+  click_button 'Adicionar nota'
+  click_button 'ENCOMENDAS'
+  click_button 'Frete'
+  #Remetente
+  fill_in 'mat-input-2', with: remetente_ok #CNPJ/CPF
+  #Destinatário
+  fill_in 'mat-input-22', with: destinatario_ok 
+  redespacho = "//div[@class='col mt-4 row mr-0 ml-0 align-items-center form-group nopadding']"
+  page.find(:xpath, redespacho).click
+  #Falta implementar
+  fill_in 'mat-input-52', with:  redespachante_tomador_ok #CNPJ/CPF
+  editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-remetente/app-pessoa/form/div/button/span"
+  page.find(:xpath, editar).click
+  fill_in 'mat-input-56', with: ' ' 
+  fill_in 'mat-input-57', with: ' '
+  fill_in 'mat-input-58', with: ' ' 
+  fill_in 'mat-input-60', with: ' ' 
+  fill_in 'mat-input-56', with: cep_nok
+  fill_in 'mat-input-57', with: ' '                      
+end                                                                                                         
+                                                                                                            
+Entao("O componente deve sobrescrever a localidade inserida anteriormente e não fazer nenhuma validação") do
+  expect(page).to_not have_content("CAMPINAS - SP")
+  puts "XXXXXX -> BUG 138953 <- "                               
+end      
+
+Quando("eu coloco um CEP com localidade inativa associada no Redespacho") do                                                                              
+  click_button 'Entrar' 
+  nota = '35190543648971000155550050006365241050820173'
+  remetente_ok = "33224031816"
+  destinatario_ok = "06068962601"
+  redespachante_tomador_ok = "66224063672"
+  placeholder = 'ex: 97898704021218987040212189870402198704021218'
+  data = 'XX/XX/XXXX'
+  cep_nok = '68912350'                                                                                                          
+  fill_in(placeholder, options = {:placeholder => placeholder, :with => nota}) #NF
+  fill_in(data, options = {:placeholder => data, :with => ' '}) #Data
+  click_button 'Adicionar nota'
+  click_button 'ENCOMENDAS'
+  click_button 'Frete'
+  #Remetente
+  fill_in 'mat-input-2', with: remetente_ok #CNPJ/CPF
+  #Destinatário
+  fill_in 'mat-input-22', with: destinatario_ok 
+  redespacho = "//div[@class='col mt-4 row mr-0 ml-0 align-items-center form-group nopadding']"
+  page.find(:xpath, redespacho).click
+  #Falta implementar
+  fill_in 'mat-input-52', with:  redespachante_tomador_ok #CNPJ/CPF
+  editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-remetente/app-pessoa/form/div/button/span"
+  page.find(:xpath, editar).click
+  fill_in 'mat-input-56', with: ' ' 
+  fill_in 'mat-input-57', with: ' '
+  fill_in 'mat-input-58', with: ' ' 
+  fill_in 'mat-input-60', with: ' ' 
+  fill_in 'mat-input-56', with: cep_nok
+  fill_in 'mat-input-57', with: ' '                      
+end                                                                                                                                                     
+                                                                                                                                                                 
+Quando("eu coloco um CEP com localidade não atendida associada no Destinatário") do                                                                                 
+  click_button 'Entrar' 
+  nota = '35190543648971000155550050006365241050820173'
+  remetente_ok = "33224031816"
+  destinatario_ok = "06068962601"
+  placeholder = 'ex: 97898704021218987040212189870402198704021218'
+  data = 'XX/XX/XXXX'
+  cep_nok = '39404074'                                                                                                          
+  fill_in(placeholder, options = {:placeholder => placeholder, :with => nota}) #NF
+  fill_in(data, options = {:placeholder => data, :with => ' '}) #Data
+  click_button 'Adicionar nota'
+  click_button 'ENCOMENDAS'
+  click_button 'Frete'
+  #Remetente
+  fill_in 'mat-input-2', with: remetente_ok #CNPJ/CPF
+  #Destinatário
+  fill_in 'mat-input-22', with: destinatario_ok
+  editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"
+  page.find(:xpath, editar).click
+  fill_in 'mat-input-26', with: ' ' 
+  fill_in 'mat-input-27', with: ' '
+  fill_in 'mat-input-28', with: ' ' 
+  fill_in 'mat-input-30', with: ' ' 
+  fill_in 'mat-input-26', with: cep_nok
+  fill_in 'mat-input-27', with: ' '                                                                                          
+end                                                                                                                                                                 
+                                                                                                                                                                    
+Entao("O componente deve sobrescrever a localidade inserida anteriormente e informar que a praça não é atendida. E não deve habilitar o botão no final da tela.") do
+  expect(page).should have_no_xpath("//mat-error[@id='mat-error-490']")                                                                                      
+end
+
+Quando("eu coloco um CEP com localidade inativa associada no Destinatário") do
+  click_button 'Entrar' 
+  nota = '35190543648971000155550050006365241050820173'
+  remetente_ok = "33224031816"
+  destinatario_ok = "06068962601"
+  placeholder = 'ex: 97898704021218987040212189870402198704021218'
+  data = 'XX/XX/XXXX'
+  cep_nok = '14800000'                                                                                                          
+  fill_in(placeholder, options = {:placeholder => placeholder, :with => nota}) #NF
+  fill_in(data, options = {:placeholder => data, :with => ' '}) #Data
+  click_button 'Adicionar nota'
+  click_button 'ENCOMENDAS'
+  click_button 'Frete'
+  #Remetente
+  fill_in 'mat-input-2', with: remetente_ok #CNPJ/CPF
+  #Destinatário
+  fill_in 'mat-input-22', with: destinatario_ok
+  editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"
+  page.find(:xpath, editar).click
+  fill_in 'mat-input-26', with: ' ' 
+  fill_in 'mat-input-27', with: ' '
+  fill_in 'mat-input-28', with: ' ' 
+  fill_in 'mat-input-30', with: ' ' 
+  fill_in 'mat-input-26', with: cep_nok
+  fill_in 'mat-input-27', with: ' ' 
+end
+
+Entao("o componente deve sobrescrever a localidade inserida anteriormente e informar que está inativa. E não deve habilitar o botão no final da tela.") do
+  expect(page).should have_no_xpath("//mat-error[@id='mat-error-490']")
+end
+
+Quando("eu coloco um CEP com localidade não atendida associada no Recebedor") do
+  click_button 'Entrar' 
+  nota = '35190543648971000155550050006365241050820173'
+  remetente_ok = "33224031816"
+  destinatario_ok = "06068962601"
+  recebedor_ok = "08415592876"
+  placeholder = 'ex: 97898704021218987040212189870402198704021218'
+  data = 'XX/XX/XXXX'
+  cep_nok = '39404074'                                                                                                          
+  fill_in(placeholder, options = {:placeholder => placeholder, :with => nota}) #NF
+  fill_in(data, options = {:placeholder => data, :with => ' '}) #Data
+  click_button 'Adicionar nota'
+  click_button 'ENCOMENDAS'
+  click_button 'Frete'
+  #Remetente
+  fill_in 'mat-input-2', with: remetente_ok #CNPJ/CPF
+  #Destinatário
+  fill_in 'mat-input-22', with: destinatario_ok
+  #Recebedor
+  recebedor = "//mat-checkbox[@id='mat-checkbox-17']/label/div"
+  page.find(:xpath, recebedor).click
+  fill_in 'mat-input-32', with: recebedor_ok
+  editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/div/app-pessoa/form/div/button"
+  page.find(:xpath, editar).click
+  fill_in 'mat-input-36', with: ' ' 
+  fill_in 'mat-input-37', with: ' '                                                                                                             
+  fill_in 'mat-input-38', with: ' ' 
+  fill_in 'mat-input-40', with: ' ' 
+  fill_in 'mat-input-36', with: cep_nok
+  fill_in 'mat-input-37', with: ' '  
+end
+
+Quando("eu coloco um CEP com localidade inativa associada no Recebedor") do
+  click_button 'Entrar' 
+  nota = '35190543648971000155550050006365241050820173'
+  remetente_ok = "33224031816"
+  destinatario_ok = "06068962601"
+  recebedor_ok = "08415592876"
+  placeholder = 'ex: 97898704021218987040212189870402198704021218'
+  data = 'XX/XX/XXXX'
+  cep_nok = '37101000'                                                                                                          
+  fill_in(placeholder, options = {:placeholder => placeholder, :with => nota}) #NF
+  fill_in(data, options = {:placeholder => data, :with => ' '}) #Data
+  click_button 'Adicionar nota'
+  click_button 'ENCOMENDAS'
+  click_button 'Frete'
+  #Remetente
+  fill_in 'mat-input-2', with: remetente_ok #CNPJ/CPF
+  #Destinatário
+  fill_in 'mat-input-22', with: destinatario_ok
+  #Recebedor
+  recebedor = "//mat-checkbox[@id='mat-checkbox-17']/label/span"
+  page.find(:xpath, recebedor).click
+  fill_in 'mat-input-32', with: recebedor_ok
+  editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/div/app-pessoa/form/div/button"
+  page.find(:xpath, editar).click
+  fill_in 'mat-input-36', with: ' ' 
+  fill_in 'mat-input-37', with: ' '                                                                                                             
+  fill_in 'mat-input-38', with: ' ' 
+  fill_in 'mat-input-40', with: ' ' 
+  fill_in 'mat-input-36', with: cep_nok
+  fill_in 'mat-input-37', with: ' '
+end

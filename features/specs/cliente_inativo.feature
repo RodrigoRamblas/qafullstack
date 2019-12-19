@@ -44,7 +44,28 @@ Entao o componente deve sobrescrever a localidade inserida anteriormente e não 
 Cenario: Inserir um cliente no Redespacho e não selecionar a opção de expedidor
 Quando eu coloco um cliente no Redespacho e não selecionar a opção de expedidor
 Entao o cliente deve ser inserido sem alteração nos campos de Prestação de Serviço.
-@test
+
 Cenario: Selecionar o Redespacho depois do cliente inserido Expedidor inserido
 Quando eu coloco o Redespacho depois do cliente inserido Expedidor inserido
 Entao o componente deve sobrescrever a localidade inserida anteriormente no expedidor e validar a praça e se está ativo
+
+Cenario: Inserir um CEP com localidade não atendida associada no Redespacho
+Quando eu coloco um CEP com localidade não atendida associada no Redespacho
+Entao O componente deve sobrescrever a localidade inserida anteriormente e não fazer nenhuma validação 
+
+Cenario: Inserir um CEP com localidade não atendida associada no Destinatário
+Quando eu coloco um CEP com localidade não atendida associada no Destinatário
+Entao O componente deve sobrescrever a localidade inserida anteriormente e informar que a praça não é atendida. E não deve habilitar o botão no final da tela.
+ 
+Cenario: Inserir um CEP com localidade inativa associada no Destinatário
+Quando eu coloco um CEP com localidade inativa associada no Destinatário
+Entao o componente deve sobrescrever a localidade inserida anteriormente e informar que está inativa. E não deve habilitar o botão no final da tela.
+@test
+Cenario: Inserir um CEP com localidade não atendida associada no Recebedor
+Quando eu coloco um CEP com localidade não atendida associada no Recebedor
+Entao O componente deve sobrescrever a localidade inserida anteriormente e informar que a praça não é atendida. E não deve habilitar o botão no final da tela.
+
+Cenario: Inserir um CEP com localidade inativa associada no Recebedor
+Quando eu coloco um CEP com localidade inativa associada no Recebedor
+Entao o componente deve sobrescrever a localidade inserida anteriormente e informar que está inativa. E não deve habilitar o botão no final da tela.
+
