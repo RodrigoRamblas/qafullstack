@@ -1,6 +1,6 @@
 #language: pt
 
-@Campos_tela_mercadoria
+@campos_tela_mercadoria
 Funcionalidade: Verificar os campos a tela de mercadoria
 Contexto: 
 Dado eu estou logado com um usuario valido

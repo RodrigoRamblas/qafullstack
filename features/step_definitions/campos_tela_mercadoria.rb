@@ -15,12 +15,12 @@ Quando("eu clico em {string}") do |declaracao|
                                                                                
   Quando("coloco os dados do remetente e destinarario") do                     
     #fill_in 'mat-input-2', with: '76712477824' #CNPJ/CPF
-    fill_in 'mat-input-2', with: "59826203866"
-    fill_in 'mat-input-3', with: "Carlos Eduardo Sebastião Leandro Lima"
-    fill_in 'mat-input-62', with: "ccarloseduardosebastiaoleandrolima@helpvale.com.br"
-    fill_in 'mat-input-5', with: "11982710378"
-    fill_in 'mat-input-6', with: "04430080"
-    fill_in 'mat-input-8', with: "291"
+    fill_in 'mat-input-7', with: "59826203866"
+    fill_in 'mat-input-8', with: "Carlos Eduardo Sebastião Leandro Lima"
+    fill_in 'mat-input-71', with: "ccarloseduardosebastiaoleandrolima@helpvale.com.br"
+    fill_in 'mat-input-10', with: "11982710378"
+    fill_in 'mat-input-11', with: "04430080"
+    fill_in 'mat-input-14', with: "291"
     fill_in 'mat-input-9', with: "Portão B"
     #Destinatário
     fill_in 'mat-input-22', with: "87829418829"
