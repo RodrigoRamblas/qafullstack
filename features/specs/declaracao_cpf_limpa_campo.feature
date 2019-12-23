@@ -1,6 +1,6 @@
 #language: pt
 
-@Declaracao_cpf_limpa_campo
+@declaracao_cpf_limpa_campo
 Funcionalidade: Verificar se os campos foram limpos após trocar o CPF
 Contexto: 
 Dado eu estou logado com um usuario valido

@@ -1,6 +1,6 @@
 #language: pt
 
-@Primeiro_acesso
+@primeiro_acesso
 Funcionalidade: Acessar o sistema pela primeira vez
 Contexto: 
 Dado eu estou no meu primeiro acesso

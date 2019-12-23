@@ -4,6 +4,7 @@
 Funcionalidade: Validar cliente
 Contexto: 
 Dado eu estou logado com um usuario valido
+Dado eu coloco a nota fiscal Valida
 
 Cenario: Validar msg de usuario inativo
 Quando eu coloco um usuario inativo
@@ -45,9 +46,9 @@ Cenario: Inserir um cliente no Redespacho e não selecionar a opção de expedid
 Quando eu coloco um cliente no Redespacho e não selecionar a opção de expedidor
 Entao o cliente deve ser inserido sem alteração nos campos de Prestação de Serviço.
 
-Cenario: Selecionar o Redespacho depois do cliente inserido Expedidor inserido
-Quando eu coloco o Redespacho depois do cliente inserido Expedidor inserido
-Entao o componente deve sobrescrever a localidade inserida anteriormente no expedidor e validar a praça e se está ativo
+# Cenario: Selecionar o Redespacho depois do cliente inserido Expedidor inserido
+# Quando eu coloco o Redespacho depois do cliente inserido Expedidor inserido
+# Entao o componente deve sobrescrever a localidade inserida anteriormente no expedidor e validar a praça e se está ativo
 
 Cenario: Inserir um CEP com localidade não atendida associada no Redespacho
 Quando eu coloco um CEP com localidade não atendida associada no Redespacho

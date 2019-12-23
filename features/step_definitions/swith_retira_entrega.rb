@@ -12,7 +12,7 @@ Quando("eu o Destinatário Tomador Localidade R|R|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -57,7 +57,7 @@ Quando("eu o Destinatário Tomador Localidade NULL|R|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -97,7 +97,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -137,7 +137,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -163,7 +163,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-55', with: 'Centro'
   end                                                                          
   
-  Quando("eu o Destinatário Tomador Localidade R|R|E") do                                  ##############################################################################
+  Quando("eu o Destinatário Tomador Localidade R|R|E") do ##############################################################################
     remetente_ok = "48700606634"
     destinatario_ok = "69437211604"
     tomador_ok = "05772286684"
@@ -195,7 +195,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -235,7 +235,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -275,7 +275,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -315,7 +315,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -355,7 +355,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -395,7 +395,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -435,7 +435,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -459,7 +459,6 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-52', with: 'Centro'  
     fill_in 'mat-input-53', with: '0'
     fill_in 'mat-input-55', with: 'Centro'
-    sleep 10
   end
   ##############################################################################################
   Entao("O sistema deve selecionar a opção de Retira podendo alterar também para Entrega") do
@@ -480,7 +479,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -520,7 +519,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -560,7 +559,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 
@@ -600,7 +599,7 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
-    fill_in 'mat-input-15',with: 'Centro'
+    fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
     fill_in 'mat-input-27', with: destinatario_ok 

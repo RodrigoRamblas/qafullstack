@@ -12,6 +12,7 @@ E coloco os dados do remetente e destinarario
 E clico em "Mercadoria"
 Entao deve ir para a tela de Mercadoria
 
+@ttt
 Cenario: Verificar se estão visiveis os campos de tela Mercadoria
 Quando eu clico em "Declaração"
 E escoclho o tipo de "Classificação de transporte"
