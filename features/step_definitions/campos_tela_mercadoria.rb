@@ -31,9 +31,10 @@ Quando("eu clico em {string}") do |declaracao|
     click_button 'CIF'
   end                                                                          
                                                                                
-  Quando("clico em {string}") do |string|
-    sleep 15                                      
-    click_button("Mercadoria")
+  Quando("clico em {string}") do |mercadoria|
+    sleep 10           
+    mercadoria = "Mercadoria"                   
+    click_button mercadoria
   end                                                                          
                                                                                
   Entao("deve ir para a tela de Mercadoria") do                                
@@ -59,19 +60,23 @@ Quando("eu clico em {string}") do |declaracao|
     click_button("expand_more")
     produto = "//div[@class='px-button-select-container ng-star-inserted'][1]/button[@class='mat-menu-item ng-star-inserted']" 
     page.find(:xpath, produto).click
-    quantidade = 'mat-input-96'
-    peso = 'mat-input-97'
-    valor_da_nota = 'mat-input-98'
+    quantidade = 'mat-input-75'
+    peso = 'mat-input-76'
+    valor_da_nota = 'mat-input-77'
     fill_in quantidade, with: "1"
     fill_in peso, with: "10"
     fill_in valor_da_nota, with: "100"
 end                                                                                                                                     
 
 Quando("em {string} preencho os campos {string}, {string}, {string}, {string}") do |dados_da_cubagem, volume, altura, largura, profundidade|
-    volume = 'mat-input-120'
-    altura = 'mat-input-121'
-    largura = 'mat-input-122'
-    profundidade = 'mat-input-123'
+    click_button("Dados da cubagem")
+    # sleep 120
+    # dados_da_cubagem = "//mat-radio-button[@id='mat-radio-8']/label[@class='mat-radio-label']/div[@class='mat-radio-label-content']"
+    # page.find(:xpath, dados_da_cubagem).click
+    volume = 'mat-input-79'
+    altura = 'mat-input-80'
+    largura = 'mat-input-81'
+    profundidade = 'mat-input-82'
     fill_in volume, with: "10"
     fill_in altura, with: "10"
     fill_in largura, with: "10"                                                        
