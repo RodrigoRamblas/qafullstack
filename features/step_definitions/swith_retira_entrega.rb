@@ -9,13 +9,13 @@ Quando("eu o Destinatário Tomador Localidade R|R|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -54,13 +54,13 @@ Quando("eu o Destinatário Tomador Localidade NULL|R|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -94,13 +94,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -134,13 +134,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -169,9 +169,9 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     tomador_ok = "05772286684"
     localidade = "48745000"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok  
+    fill_in 'Destinatario', with: destinatario_ok  
     click_button("Outros")
     fill_in 'mat-input-47', with: tomador_ok    
   end                                                                                      
@@ -192,13 +192,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -232,13 +232,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -272,13 +272,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -312,13 +312,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -352,13 +352,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -392,13 +392,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -432,13 +432,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -476,13 +476,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -516,13 +516,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -556,13 +556,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  
@@ -596,13 +596,13 @@ Quando("eu o Destinatário Tomador Localidade R|NULL|R") do
     editar1 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"                                                                                                       
     editar2 = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: cep_retira
     fill_in 'mat-input-12',with: 'Centro'
     fill_in 'mat-input-13', with: '0' 
     #Destinatário
-    fill_in 'mat-input-27', with: destinatario_ok 
+    fill_in 'Destinatario', with: destinatario_ok 
     page.find(:xpath, editar1).click
     fill_in 'mat-input-31', with: ' '
     fill_in 'mat-input-32', with: ' '  

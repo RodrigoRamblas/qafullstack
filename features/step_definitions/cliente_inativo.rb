@@ -1,6 +1,6 @@
 Quando("eu coloco um usuario inativo") do 
   cnpj_cpf = "17155342000183"
-  fill_in 'mat-input-7', with: cnpj_cpf
+  fill_in 'Remetente', with: cnpj_cpf
   end                                                                          
                                                                                
   Entao("eu verifico se apareceu a msg de usuario inativo") do                 
@@ -13,7 +13,7 @@ Quando("eu coloco um usuario inativo") do
 
   Quando("eu coloco um usuario ativo") do                                      
     cnpj_cpf = "33224031816"
-    fill_in 'mat-input-7', with: cnpj_cpf
+    fill_in 'Remetente', with: cnpj_cpf
   end                                                                          
                                                                                
   Entao("eu verifico se o botão CIF está disponivel") do                       
@@ -24,9 +24,9 @@ Quando("eu coloco um usuario inativo") do
     remetente_ok = "33224031816"
     destinatario_nok = '17155342000183'
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     #Destinatário
-    fill_in 'mat-input-27', with:  destinatario_nok #CNPJ/CPF
+    fill_in 'Destinatario', with:  destinatario_nok #CNPJ/CPF
   end
   
   Entao("o sistema deixa o botão FOB desabilitado") do
@@ -38,9 +38,9 @@ Quando("eu coloco um usuario inativo") do
     destinatario_ok = '11974117634' #msg de 5 erros
     redespachante_tomador_nok = '21126271000168'
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     #Destinatário
-    fill_in 'mat-input-27', with:  destinatario_ok #CNPJ/CPF
+    fill_in 'Destinatario', with:  destinatario_ok #CNPJ/CPF
     #Redespachante/Tomador
     redespacho = "//div[@class='col mt-4 row mr-0 ml-0 align-items-center form-group nopadding']"
     page.find(:xpath, redespacho).click
@@ -54,7 +54,7 @@ Quando("eu coloco um usuario inativo") do
   Quando("eu coloco um remetente ativo que tenha msg") do                                          
     remetente_ok = '66425133000118' #msg de 5 erros
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
   end
   
   Entao("o sistema apresenta as msg.") do
@@ -66,19 +66,19 @@ Quando("eu coloco um usuario inativo") do
     destinatario_ok = '11974117634' #msg de 5 erros
     redespachante_tomador_nok = '21126271000168'
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     #Destinatário
-    fill_in 'mat-input-27', with:  destinatario_ok #CNPJ/CPF
+    fill_in 'Destinatario', with:  destinatario_ok #CNPJ/CPF
     #Redespachante/Tomador
     click_button("Outros")
-    fill_in 'mat-input-27', with:  redespachante_tomador_nok #CNPJ/CPF       
+    fill_in 'Destinatario', with:  redespachante_tomador_nok #CNPJ/CPF       
   end     
   
   Quando("eu coloco uma localidade não atendida associada no remetente") do
     remetente_ok = "33224031816"
     cep_nok = '68912350'
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-remetente/app-pessoa/form/div/button/span"
     page.find(:xpath, editar).click
     fill_in 'mat-input-11', with: ' ' 
@@ -98,7 +98,7 @@ Quando("eu coloco um usuario inativo") do
     expedidor_nok = "17155342000183"
     cep_nok = '68912350'
     #Remetente
-    fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     expedidor = "//mat-checkbox[@id='mat-checkbox-15']/label/div" 
     page.find(:xpath, expedidor).click
     fill_in 'mat-input-17', with: expedidor_nok
@@ -109,9 +109,9 @@ Quando("eu coloco um cliente no Redespacho e não selecionar a opção de expedi
   destinatario_ok = '11974117634' #msg de 5 erros
   redespachante_tomador_ok = '06225593624'
   #Remetente
-  fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+  fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
   #Destinatário
-  fill_in 'mat-input-27', with:  destinatario_ok #CNPJ/CPF
+  fill_in 'Destinatario', with:  destinatario_ok #CNPJ/CPF
   #Redespachante/Tomador
   redespacho = "//div[@class='col mt-4 row mr-0 ml-0 align-items-center form-group nopadding']"
   page.find(:xpath, redespacho).click
@@ -128,7 +128,7 @@ end
 #   expedidor_ok = "06068962601"
 #   redespachante_tomador_ok = "66224063672"
 #   #Remetente
-#   fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+#   fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
 #   expedidor = "//mat-checkbox[@id='mat-checkbox-15']/label/div" 
 #   page.find(:xpath, expedidor).click
 #   fill_in 'mat-input-17', with: expedidor_ok 
@@ -149,9 +149,9 @@ Quando("eu coloco um CEP com localidade não atendida associada no Redespacho") 
   redespachante_tomador_ok = "66224063672"
   cep_nok = '36033640'                                                                                                          
   #Remetente
-  fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+  fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
   #Destinatário
-  fill_in 'mat-input-27', with: destinatario_ok 
+  fill_in 'Destinatario', with: destinatario_ok 
   redespacho = "//div[@class='col mt-4 row mr-0 ml-0 align-items-center form-group nopadding']"
   page.find(:xpath, redespacho).click
   #Falta implementar
@@ -177,9 +177,9 @@ Quando("eu coloco um CEP com localidade inativa associada no Redespacho") do
   redespachante_tomador_ok = "66224063672"
   cep_nok = '68912350'                                                                                                          
   #Remetente
-  fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+  fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
   #Destinatário
-  fill_in 'mat-input-27', with: destinatario_ok 
+  fill_in 'Destinatario', with: destinatario_ok 
   redespacho = "//div[@class='col mt-4 row mr-0 ml-0 align-items-center form-group nopadding']"
   page.find(:xpath, redespacho).click
   #Falta implementar
@@ -200,9 +200,9 @@ Quando("eu coloco um CEP com localidade não atendida associada no Destinatário
   cep_nok = '39404074'                                                                                                          
 
   #Remetente
-  fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+  fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
   #Destinatário
-  fill_in 'mat-input-27', with: destinatario_ok
+  fill_in 'Destinatario', with: destinatario_ok
   editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"
   page.find(:xpath, editar).click
   fill_in 'mat-input-31', with: ' ' 
@@ -222,9 +222,9 @@ Quando("eu coloco um CEP com localidade inativa associada no Destinatário") do
   destinatario_ok = "06068962601"
   cep_nok = '14800000'                                                                                                          
   #Remetente
-  fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+  fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
   #Destinatário
-  fill_in 'mat-input-27', with: destinatario_ok
+  fill_in 'Destinatario', with: destinatario_ok
   editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"
   page.find(:xpath, editar).click
 
@@ -246,9 +246,9 @@ Quando("eu coloco um CEP com localidade não atendida associada no Recebedor") d
   recebedor_ok = "08415592876"
   cep_nok = '39404074'                                                                                                          
   #Remetente
-  fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+  fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
   #Destinatário
-  fill_in 'mat-input-27', with: destinatario_ok
+  fill_in 'Destinatario', with: destinatario_ok
   #Recebedor
   recebedor = "//mat-checkbox[@id='mat-checkbox-17']/label/div"
   page.find(:xpath, recebedor).click
@@ -269,9 +269,9 @@ Quando("eu coloco um CEP com localidade inativa associada no Recebedor") do
   recebedor_ok = "08415592876"
   cep_nok = '37101000'                                                                                                          
   #Remetente
-  fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+  fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
   #Destinatário
-  fill_in 'mat-input-27', with: destinatario_ok
+  fill_in 'Destinatario', with: destinatario_ok
   #Recebedor
   recebedor = "//mat-checkbox[@id='mat-checkbox-17']/label/span"
   page.find(:xpath, recebedor).click

@@ -1,29 +1,43 @@
+frete            = Frete.new
+dados_da_emissao = Dados_da_emissao.new
+
+ex               = dados_da_emissao.expand
+cpf              = frete.cpf
+remetente        = frete.remetente
+d                = frete.declaracao
+razao            = frete.remetente_razao_social
+nome             = frete.nome
+email            = frete.email 
+remetente_email  = frete.remetente_email
+
+
 Quando("eu clico em {string}") do |declaracao|
-  click_button("Entrar")
-  declaracao = "//div[@id='mat-tab-label-0-1']/div[@class='mat-tab-label-content']" 
+    click_button("Entrar")
+    declaracao = d
     page.find(:xpath, declaracao).click
   end                                                                          
                                                                                
   Quando("escoclho o tipo de {string}") do |classificacao_do_transporte|                            
-    click_button("expand_more")
+    click_button(ex)
 
     classificacao_do_transporte = "//div[@class='px-button-select-container ng-star-inserted'][2]/button[@class='mat-menu-item ng-star-inserted']" 
     page.find(:xpath, classificacao_do_transporte).click
     click_button("Frete") 
   end                                                                          
                                                                                
-  Quando("coloco os dados do remetente e destinarario") do   
-    fill_in 'mat-input-7', with: "59826203866"
-    fill_in 'mat-input-8', with: "Carlos Eduardo Sebastião Leandro Lima"
-    fill_in 'mat-input-71', with: "ccarloseduardosebastiaoleandrolima@helpvale.com.br"
+  Quando("coloco os dados do remetente e destinarario") do  
+    fill_in remetente, with: cpf
+    fill_in razao, with: nome
+    fill_in remetente_email, with: email
+    sleep 360
     fill_in 'mat-input-10', with: "11982710378"
     fill_in 'mat-input-11', with: "04430080"
     fill_in 'mat-input-13', with: "291"
     fill_in 'mat-input-14', with: "Portão B"
     #Destinatário
-    fill_in 'mat-input-27', with: "87829418829"
-    fill_in 'mat-input-28', with: "Gustavo Leonardo Vicente Aparício"  
-    fill_in 'mat-input-72', with: "ggustavoleonardovicenteaparicio@lvnonline.com.be"
+    fill_in 'Destinatario', with: cpf
+    fill_in 'mat-input-28', with: nome  
+    fill_in 'mat-input-72', with: email
     fill_in 'mat-input-30', with: "1127904584"
     fill_in 'mat-input-31', with: "03925020"
     fill_in 'mat-input-33', with: "465"
@@ -31,8 +45,8 @@ Quando("eu clico em {string}") do |declaracao|
     click_button 'CIF'
   end                                                                          
                                                                                
-  Quando("clico em {string}") do |mercadoria|
-    sleep 10           
+  Quando("clico em {string}") do |mercadoria| 
+    sleep 20      
     mercadoria = "Mercadoria"                   
     click_button mercadoria
   end                                                                          
@@ -50,19 +64,19 @@ Quando("eu clico em {string}") do |declaracao|
     # expect(page).to have_xpath("//input[@id='mat-input-67']")
     # expect(page).to have_xpath("//input[@id='mat-input-68']")
     # expect(page).to have_xpath("//input[@id='mat-input-69']")
-    # expect(page).to have_xpath("//input[@id='mat-input-70']")
+    # expect(page).to have_xpath("//input[@id='Remetente0']")
     # expect(page).to have_xpath("//input[@id='mat-input-71']")
-    # expect(page).to have_xpath("//input[@id='mat-input-72']")
-    # expect(page).to have_xpath("//input[@id='mat-input-73']")
+    # expect(page).to have_xpath("//input[@id='Remetente2']")
+    # expect(page).to have_xpath("//input[@id='Remetente3']")
   end                                                                          
 
   Quando("preencho corretamente os campos: {string}, {string}, {string}, {string}") do |produto, quantidade, peso, valor_da_nota|                
     click_button("expand_more")
     produto = "//div[@class='px-button-select-container ng-star-inserted'][1]/button[@class='mat-menu-item ng-star-inserted']" 
     page.find(:xpath, produto).click
-    quantidade = 'mat-input-75'
-    peso = 'mat-input-76'
-    valor_da_nota = 'mat-input-77'
+    quantidade = 'Remetente5'
+    peso = 'Remetente6'
+    valor_da_nota = 'Remetente7'
     fill_in quantidade, with: "1"
     fill_in peso, with: "10"
     fill_in valor_da_nota, with: "100"
@@ -73,7 +87,7 @@ Quando("em {string} preencho os campos {string}, {string}, {string}, {string}") 
     # sleep 120
     # dados_da_cubagem = "//mat-radio-button[@id='mat-radio-8']/label[@class='mat-radio-label']/div[@class='mat-radio-label-content']"
     # page.find(:xpath, dados_da_cubagem).click
-    volume = 'mat-input-79'
+    volume = 'Remetente9'
     altura = 'mat-input-80'
     largura = 'mat-input-81'
     profundidade = 'mat-input-82'

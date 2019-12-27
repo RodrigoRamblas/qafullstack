@@ -6,9 +6,9 @@ Quando("em remetente eu coloco outro CPF") do
     click_button("expand_more")
     page.find(:xpath, encomendas).click
     click_button("Frete")
-    fill_in 'mat-input-7', with: "74555427807" 
+    fill_in 'Remetente', with: "74555427807" 
     fill_in 'mat-input-8', with: "Rodrigo"
-    fill_in 'mat-input-7', with: "74555427897" 
+    fill_in 'Remetente', with: "74555427897" 
   end
   
   Entao("deve limpar os campo preenchidos do remetente") do
@@ -23,9 +23,9 @@ Quando("em remetente eu coloco outro CPF") do
     encomendas = "//div[@class='px-button-select-container ng-star-inserted'][2]/button[@class='mat-menu-item ng-star-inserted']" 
     page.find(:xpath, encomendas).click
     click_button("Frete")
-    fill_in 'mat-input-27', with: "74555427807" 
+    fill_in 'Destinatario', with: "74555427807" 
     fill_in 'mat-input-28', with: "Rodrigo"
-    fill_in 'mat-input-27', with: "74555427897" 
+    fill_in 'Destinatario', with: "74555427897" 
   end
   
   Entao("deve limpar os campo preenchidos do destinatario") do

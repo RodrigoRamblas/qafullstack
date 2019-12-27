@@ -6,9 +6,9 @@ Quando("eu coloco uma localidade não atendida") do
   placeholder = 'ex: 97898704021218987040212189870402198704021218'
   data = 'XX/XX/XXXX'                
   #Remetente
-  fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+  fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
   #Destinatário
-  fill_in 'mat-input-27', with:  destinatario_ok #CNPJ/CPF
+  fill_in 'Destinatario', with:  destinatario_ok #CNPJ/CPF
   editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span" 
   page.find(:xpath, editar).click
   fill_in 'mat-input-31', with: ' '
@@ -33,7 +33,7 @@ Quando("eu coloco um CEP com localidade inativa associada no Remetente") do
   data = 'XX/XX/XXXX'
   editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-remetente/app-pessoa/form/div/button"
   #Remetente
-  fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+  fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
   page.find(:xpath, editar).click
   fill_in 'mat-input-11', with: ' '
   fill_in 'mat-input-12', with: ' '
@@ -56,9 +56,9 @@ Quando("eu coloco um CEP com localidade não atendida associada no Expedidor") d
   placeholder = 'ex: 97898704021218987040212189870402198704021218'
   data = 'XX/XX/XXXX'                             
   #Remetente
-  fill_in 'mat-input-7', with: remetente_ok #CNPJ/CPF
+  fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
   #Destinatário
-  fill_in 'mat-input-27', with:  destinatario_ok #CNPJ/CPF
+  fill_in 'Destinatario', with:  destinatario_ok #CNPJ/CPF
   editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span" 
   page.find(:xpath, editar).click
   click_button("Outros")
