@@ -30,7 +30,6 @@ Cenario: Destinatário Tomador Localidade
        R	        R	         E	
 Quando eu o Destinatário Tomador Localidade R|R|E	   
 Entao O sistema deve selecionar a opção de Entrega sem a possibilidade de alteração
-
 Cenario: Destinatário Tomador Localidade 
               NULL        R	         E		
 Quando eu o Destinatário Tomador Localidade NULL|R|E	   
@@ -67,7 +66,6 @@ Quando eu o Destinatário Tomador Localidade R|NULL|RE
 Entao O sistema deve selecionar a opção de Retira sem a possibilidade de alteração
 
 
-@refatoracao
 Cenario: Destinatário Tomador Localidade 
           NULL        NULL         RE	 
 Quando eu o Destinatário Tomador Localidade NULL|NULL|RE	   

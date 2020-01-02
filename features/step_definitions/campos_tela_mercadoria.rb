@@ -29,7 +29,6 @@ Quando("eu clico em {string}") do |declaracao|
     fill_in remetente, with: cpf
     fill_in razao, with: nome
     fill_in remetente_email, with: email
-    sleep 360
     fill_in 'mat-input-10', with: "11982710378"
     fill_in 'mat-input-11', with: "04430080"
     fill_in 'mat-input-13', with: "291"

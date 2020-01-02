@@ -41,7 +41,7 @@ Entao o componente deve sobrescrever a localidade inserida anteriormente e não 
 Cenario: Inserir uma  localidade não atendida associada no expedidor
 Quando eu coloco uma  localidade não atendida associada no expedidor
 Entao o componente deve sobrescrever a localidade inserida anteriormente e não fazer nenhuma validação.
-
+@xxxxxx
 Cenario: Inserir um cliente no Redespacho e não selecionar a opção de expedidor
 Quando eu coloco um cliente no Redespacho e não selecionar a opção de expedidor
 Entao o cliente deve ser inserido sem alteração nos campos de Prestação de Serviço.
@@ -61,7 +61,7 @@ Entao O componente deve sobrescrever a localidade inserida anteriormente e infor
 Cenario: Inserir um CEP com localidade inativa associada no Destinatário
 Quando eu coloco um CEP com localidade inativa associada no Destinatário
 Entao o componente deve sobrescrever a localidade inserida anteriormente e informar que está inativa. E não deve habilitar o botão no final da tela.
-@test
+
 Cenario: Inserir um CEP com localidade não atendida associada no Recebedor
 Quando eu coloco um CEP com localidade não atendida associada no Recebedor
 Entao O componente deve sobrescrever a localidade inserida anteriormente e informar que a praça não é atendida. E não deve habilitar o botão no final da tela.

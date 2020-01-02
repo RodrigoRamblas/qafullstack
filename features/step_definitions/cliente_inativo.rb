@@ -1,10 +1,29 @@
+cliente_inativo           = Cliente_inativo.new
+frete                     = Frete.new
+retira_entrega            = Retira_Entrega.new
+
+id_remetente              = frete.remetente
+id_destinatario           = retira_entrega.destinatario
+cpf_cnpj_cliente_inativo  = cliente_inativo.cpf_cnpj_cliente_inativo
+remetente_ok              = retira_entrega.remetente_ok
+destinatario_nok          = retira_entrega.destinatario_nok
+redespacho                = cliente_inativo.redespacho
+redespachante_tomador_nok = cliente_inativo.redespachante_tomador_nok
+destinatario_ok           = retira_entrega.destinatario_ok
+id_redespachante          = cliente_inativo.redespachante 
+remetente_ok_com_mgs      = retira_entrega.remetente_ok_com_mgs    
+expedidor                 = cliente_inativo.expedidor     
+recebedor                 = cliente_inativo.recebedor
+
+
 Quando("eu coloco um usuario inativo") do 
-  cnpj_cpf = "17155342000183"
-  fill_in 'Remetente', with: cnpj_cpf
+  fill_in id_remetente, with: cpf_cnpj_cliente_inativo
+  sleep 120
   end                                                                          
                                                                                
   Entao("eu verifico se apareceu a msg de usuario inativo") do                 
     expect(page).to have_xpath("//fieldset[1]/div[@class='row']/div[@class='col-5 form-group c-input-cpf-cnpj']/span[@class='c-alert-inativo top']")
+    expect(page).to have_content("Cliente inativo")
   end     
 
   Entao("eu verifico se o botão CIF está inativo") do
@@ -12,8 +31,7 @@ Quando("eu coloco um usuario inativo") do
   end
 
   Quando("eu coloco um usuario ativo") do                                      
-    cnpj_cpf = "33224031816"
-    fill_in 'Remetente', with: cnpj_cpf
+    fill_in id_remetente, with: cpf_cnpj_cliente_inativo
   end                                                                          
                                                                                
   Entao("eu verifico se o botão CIF está disponivel") do                       
@@ -21,12 +39,8 @@ Quando("eu coloco um usuario inativo") do
   end
 
   Quando("eu coloco um remetente ativo e um destinatario inativo") do
-    remetente_ok = "33224031816"
-    destinatario_nok = '17155342000183'
-    #Remetente
-    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
-    #Destinatário
-    fill_in 'Destinatario', with:  destinatario_nok #CNPJ/CPF
+    fill_in id_remetente, with: remetente_ok #CNPJ/CPF
+    fill_in id_destinatario, with:  destinatario_nok #CNPJ/CPF
   end
   
   Entao("o sistema deixa o botão FOB desabilitado") do
@@ -34,17 +48,13 @@ Quando("eu coloco um usuario inativo") do
   end
   
   Quando("eu coloco um remetente ativo e um destinatario ativo e um expedidor inativo") do    
-    remetente_ok = "48335762600"
-    destinatario_ok = '11974117634' #msg de 5 erros
-    redespachante_tomador_nok = '21126271000168'
     #Remetente
-    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
+    fill_in id_remetente, with: remetente_ok #CNPJ/CPF
     #Destinatário
-    fill_in 'Destinatario', with:  destinatario_ok #CNPJ/CPF
+    fill_in id_destinatario, with:  destinatario_ok #CNPJ/CPF
     #Redespachante/Tomador
-    redespacho = "//div[@class='col mt-4 row mr-0 ml-0 align-items-center form-group nopadding']"
     page.find(:xpath, redespacho).click
-    fill_in 'mat-input-57', with:  redespachante_tomador_nok #CNPJ/CPF
+    fill_in id_redespachante, with:  redespachante_tomador_nok #CNPJ/CPF
   end                                                                                                                                     
   
   Entao("o sistema apresenta uma msg de Epa, Redespachante ou Tomador inválido, verifique se você preencheu corretamente as informações.") do                                                                                                                                                                                              
@@ -52,9 +62,7 @@ Quando("eu coloco um usuario inativo") do
   end
   
   Quando("eu coloco um remetente ativo que tenha msg") do                                          
-    remetente_ok = '66425133000118' #msg de 5 erros
-    #Remetente
-    fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
+    fill_in id_remetente, with: remetente_ok_com_mgs #CNPJ/CPF
   end
   
   Entao("o sistema apresenta as msg.") do
@@ -101,7 +109,7 @@ Quando("eu coloco um usuario inativo") do
     fill_in 'Remetente', with: remetente_ok #CNPJ/CPF
     expedidor = "//mat-checkbox[@id='mat-checkbox-15']/label/div" 
     page.find(:xpath, expedidor).click
-    fill_in 'mat-input-17', with: expedidor_nok
+    fill_in expedidor, with: expedidor_nok
   end      
                                                                                            
 Quando("eu coloco um cliente no Redespacho e não selecionar a opção de expedidor") do    
@@ -252,7 +260,7 @@ Quando("eu coloco um CEP com localidade não atendida associada no Recebedor") d
   #Recebedor
   recebedor = "//mat-checkbox[@id='mat-checkbox-17']/label/div"
   page.find(:xpath, recebedor).click
-  fill_in 'mat-input-37', with: recebedor_ok
+  fill_in recebedor, with: recebedor_ok
   editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/div/app-pessoa/form/div/button"
   page.find(:xpath, editar).click
   fill_in 'mat-input-41', with: ' ' 
