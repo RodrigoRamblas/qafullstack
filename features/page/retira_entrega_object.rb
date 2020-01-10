@@ -5,8 +5,9 @@ class Retira_Entrega
     end
 
     def bairro_remetente
-        'mat-input-12'
+        'mat-input-15'
     end
+
     
     def bairro_tomador
         'mat-input-55'
@@ -19,11 +20,11 @@ class Retira_Entrega
     def cep_remetente
         'mat-input-11'
     end
-
+    
     def cep_destinatario
         'mat-input-31'
     end
-
+    
     def cep_tomador
         'mat-input-51'
     end
@@ -31,14 +32,15 @@ class Retira_Entrega
     def cpf_cnpj_tomador_ok
         %w(05772286684 03293456642 63816636004 48700606634 30411577050 34896029860).sample
     end
-
+    
     def cep_nok
         %w(68912350).sample
-
+    end
+    
     def destinatario
         'Destinatario'
     end
-
+    
     def destinatario_ok
         %w(69437211604 07633886617 48700606634 30411577050 05772286684 03293456642 30411577050).sample
     end
@@ -46,39 +48,54 @@ class Retira_Entrega
     def destinatario_nok
         %w(17155342000183 11974117634).sample
     end
-
+    
     def redespachante_tomador_nok
         %w(21126271000168).sample
     end
-
+    
     def editar_remetente
         "//div[@id='cdk-step-content-0-1']/app-frete/div/app-remetente/app-pessoa/form/div/button"
     end
-            
+    
     def editar_destinatario
         "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"
     end    
-        
+    
     def editar_tomador
         "//div[@id='cdk-step-content-0-1']/app-frete/div/app-empresa-destino-entrega/div/app-tomador/app-pessoa/form/div/button"
     end
-
+    
     def editar_remetente
         "//div[@id='cdk-step-content-0-1']/app-frete/div/app-remetente/app-pessoa/form/div/button/span"
+    end
+    
+    def editar_destinatario
+        "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/app-pessoa/form/div/button/span"
+    end
+    
+    def limpar_campo(mat = [])
+        
+        for x in mat
+            puts x
+        end
     end
 
     def logradouro
         %w(Centro).sample
     end
-
+    
     def logradouro_destinatario
         'mat-input-32'
     end
 
+    def logradouro_remetente
+        'mat-input-12'
+    end
+    
     def logradouro_tomador
         'mat-input-52'
     end
-
+    
     def numero_remetente
         'mat-input-13'
     end
@@ -114,5 +131,4 @@ class Retira_Entrega
     def redespachante_tomador_ok 
         %w(66224063672).sample
     end
-    
 end
