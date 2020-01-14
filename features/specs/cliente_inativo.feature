@@ -33,7 +33,7 @@ Entao o sistema apresenta as msg.
 Cenario: Inserir um tomador inativo abre modal
 Quando eu coloco um remetente ativo e um destinatario ativo e um tomador inativo
 Entao o sistema apresenta uma msg de Epa, Redespachante ou Tomador inválido, verifique se você preencheu corretamente as informações.
-@xxxxxx
+
 Cenario: Inserir uma localidade não atendida associada no remetente
 Quando eu coloco uma localidade não atendida associada no remetente
 Entao o componente deve sobrescrever a localidade inserida anteriormente e não fazer nenhuma validação.

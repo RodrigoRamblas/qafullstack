@@ -36,6 +36,10 @@ class Retira_Entrega
     def cep_nok
         %w(68912350).sample
     end
+
+    def cif
+        'CIF'
+    end
     
     def destinatario
         'Destinatario'
@@ -94,6 +98,10 @@ class Retira_Entrega
     
     def logradouro_tomador
         'mat-input-52'
+    end
+
+    def mercadoria
+        'Mercadoria'
     end
     
     def numero_remetente

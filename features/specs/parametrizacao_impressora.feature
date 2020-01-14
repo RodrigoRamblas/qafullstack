@@ -27,13 +27,13 @@ E clico no botão salvar da tela
 Entao deve apresentar a mensagem "Impressora(s) alterada(s) com sucesso."
 
 #Updade
+@teste
 Cenario: Retirar a impressora DACTE e impressora Etiquetas e clicar no botão Salvar
 Quando eu clico no flag "Selecione a impressora para DACTE / Manifesto / Declaração / Coleta" 
 E escolho a impressora Dacte
 E clico no flag "Selecione a impressora para Etiquetas"
 E escolho a impressora Etiqueta
 E clico no botão salvar da tela
-E clico novamente no flag "Selecione a impressora para Etiquetas"
 E clico no botão salvar da tela
 Entao deve apresentar a mensagem "Impressora(s) alterada(s) com sucesso."
 

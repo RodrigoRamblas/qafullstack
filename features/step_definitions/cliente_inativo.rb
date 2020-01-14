@@ -37,8 +37,9 @@ Quando("eu coloco um usuario inativo") do
   sleep 9
   end                                                                          
                                                                                
-  Entao("eu verifico se apareceu a msg de usuario inativo") do                 
-    expect(page).to have_xpath("//span[@class='c-alert-inativo top']")
+  Entao("eu verifico se apareceu a msg de usuario inativo") do  
+    sleep 2
+    expect(page).to have_xpath("//fieldset[1]/div[@class='row']/div[@class='col-5 form-group c-input-cpf-cnpj']/span[@class='c-alert-inativo top']")
   end     
 
   Entao("eu verifico se o botão CIF está inativo") do
@@ -99,9 +100,9 @@ Quando("eu coloco um usuario inativo") do
     #Remetente
     fill_in id_remetente, with: remetente_ok #CNPJ/CPF
     page.find(:xpath, editar_remetente).click
-    id_campos = [id_cep_remetente, id_logradouro_remetente] 
-    retira_entrega.limpar_campo(id_campos)
-    fill_in id_cep_remetente.clear
+    fill_in id_cep_remetente, with: ' ' 
+    fill_in id_logradouro_remetente, with: ' ' 
+
     #fill_in id_cep_remetente, with: ' ' #cep
     find('#mat-input-11').send_keys(' ')
     page.find(:xpath, editar_remetente).click
@@ -111,7 +112,6 @@ Quando("eu coloco um usuario inativo") do
     fill_in id_bairro_remetente, with: ' ' #15
     fill_in id_cep_remetente, with: cep_nok
     fill_in id_bairro_remetente, with: ' ' #15
-    sleep 120
   end
   
   Entao("o componente deve sobrescrever a localidade inserida anteriormente e não fazer nenhuma validação.") do
@@ -139,27 +139,7 @@ end
 Entao("o cliente deve ser inserido sem alteração nos campos de Prestação de Serviço.") do
   #expect(page).to have_content("CLAUDIO - MG")
   #expect(page).to have_content("BARBACENA - MG")           
-end                                                                                                                                                          
-
-# Quando("eu coloco o Redespacho depois do cliente inserido Expedidor inserido") do
-#   remetente_ok = "33224031816"
-#   expedidor_ok = "06068962601"
-#   redespachante_tomador_ok = "66224063672"
-#   #Remetente
-#   fill_in id_remetente, with: remetente_ok #CNPJ/CPF
-#   expedidor = "//mat-checkbox[@id='mat-checkbox-15']/label/div" 
-#   page.find(:xpath, expedidor).click
-#   fill_in 'mat-input-17', with: expedidor_ok 
-#   sleep 300
-#   redespacho = "//div[@class='col mt-4 row mr-0 ml-0 align-items-center form-group nopadding']"
-#   page.find(:xpath, redespacho).click
-#   #Falta implementar
-#   fill_in 'mat-input-57', with:  redespachante_tomador_ok #CNPJ/CPF                                             
-# end                                                                                                                          
-
-# Entao("o componente deve sobrescrever a localidade inserida anteriormente no expedidor e validar a praça e se está ativo") do
-#   expect(page).to have_content("Redespachante/Tomador")                                               
-# end                                                                                                                          
+end                                                                                                                                                                                                                                                                                   
 
 Quando("eu coloco um CEP com localidade não atendida associada no Redespacho") do                                                                                                                                   
   #Remetente
@@ -276,10 +256,10 @@ Quando("eu coloco um CEP com localidade inativa associada no Recebedor") do
   fill_in id_recebedor, with: recebedor_ok
   editar = "//div[@id='cdk-step-content-0-1']/app-frete/div/app-destinatario/div/app-pessoa/form/div/button"
   page.find(:xpath, editar).click
-  fill_in 'mat-input-31', with: ' ' 
-  fill_in 'mat-input-32', with: ' '                                                                                                             
-  fill_in 'mat-input-33', with: ' ' 
-  fill_in 'mat-input-35', with: ' ' 
-  fill_in 'mat-input-31', with: cep_nok
-  fill_in 'mat-input-32', with: ' ' 
+  fill_in 'mat-input-41', with: ' ' 
+  fill_in 'mat-input-42', with: ' '                                                                                                             
+  fill_in 'mat-input-43', with: ' ' 
+  fill_in 'mat-input-45', with: ' ' 
+  fill_in 'mat-input-41', with: cep_nok
+  fill_in 'mat-input-42', with: ' ' 
 end

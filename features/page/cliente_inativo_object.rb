@@ -1,6 +1,6 @@
 class Cliente_inativo
     def cpf_cnpj_cliente_inativo
-        %w(17155342000183 33224031816).sample
+        %w(17155342000183).sample
     end
 
     def redespacho
