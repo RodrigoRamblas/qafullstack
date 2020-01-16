@@ -53,9 +53,11 @@ Quando("o usuário tiver permissão de Desconto ou acréscimo, já vir seleciona
     fill_in quantidade_mercadoria, with: '1'
     fill_in peso_mercadoria, with: '1'
     fill_in valor_nf_mercadoria, with: '1'
-    sleep 400
+    click_button('Calcular')
+    click_button('Aplicar desconto/acréscimo')
 end
   
 Entao("eu verifico se apareceu a switch correta") do
-
+    expect(page).to have_content('Acréscimo')#ENCOMENDAS E-COMMERCE
+    #expect(page).should have_no_xpath("//button[@id='mat-button-toggle-29-button']/[aria-pressed='false']")
 end

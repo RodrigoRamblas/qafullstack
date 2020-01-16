@@ -17,7 +17,7 @@ class Login
     end
 
     def url
-        "http://localhost:90/#/login"
+        "C"
     end
        
     def outro_usuario

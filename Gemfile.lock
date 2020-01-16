@@ -59,6 +59,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.0)
+    ruby-oci8 (2.2.8-x64-mingw32)
+    ruby-oci8 (2.2.8-x86-mingw32)
     rubyzip (2.0.0)
     rumouse (0.0.6)
       ffi (~> 1.9.3)
@@ -76,6 +78,7 @@ DEPENDENCIES
   capybara
   cucumber
   rspec
+  ruby-oci8 (~> 2.2, >= 2.2.7)
   rumouse
   selenium-webdriver
 

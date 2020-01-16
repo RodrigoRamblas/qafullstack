@@ -35,4 +35,19 @@ class Frete
     def declaracao
         "//div[@id='mat-tab-label-0-1']/div[@class='mat-tab-label-content']" 
     end
+
+    def teste
+        connection = OCI8.new( 'GARDENIA_TESTE', 'GARDENIA_TESTE', 'ORA12C')
+        cursor = connection.exec('SELECT  *
+            FROM    (
+                SELECT cpf_cnpj
+                FROM   enc7_cliente
+                ORDER BY
+                        dbms_random.value
+                )
+            WHERE rownum <= 1')
+        while r = cursor.fetch()
+          puts r.join(' | ')
+        end
+    end
 end

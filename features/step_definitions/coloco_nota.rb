@@ -1,5 +1,5 @@
 Quando("eu coloco a nota fiscal Valida na tela") do
-    click_button('Entrar')                                 
+    click_button('Entrar')                      
     @nota1 = "33181192080035000368550000000722091011209774"                             
     fill_in("ex: 97898704021218987040212189870402198704021218", options = {:placeholder => 'ex: 97898704021218987040212189870402198704021218', :with => @nota1}) #NF
     fill_in("XX/XX/XXXX", options = {:placeholder => 'XX/XX/XXXX', :with => " "}) #Data

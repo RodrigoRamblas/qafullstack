@@ -1,3 +1,7 @@
+oracle         = Oracle.new
+cpf_cnpj       = oracle.connect
+cpf_cnpj_destinatario = oracle.cpf_cnpj_destinatario
+
 Quando("em remetente eu coloco outro CPF") do
     click_button("Entrar")
     declaracao = "//div[@id='mat-tab-label-0-1']/div[@class='mat-tab-label-content']" 
@@ -6,7 +10,13 @@ Quando("em remetente eu coloco outro CPF") do
     click_button("expand_more")
     page.find(:xpath, encomendas).click
     click_button("Frete")
-    fill_in 'Remetente', with: "74555427807" 
+    sleep 5
+    puts cpf_cnpj
+    puts "DDDDDDDDDDDD"
+    puts cpf_cnpj_destinatario
+    fill_in 'Remetente', with: cpf_cnpj 
+    sleep 500
+    #fill_in 'Remetente', with: "74555427807" 
     fill_in 'mat-input-8', with: "Rodrigo"
     fill_in 'Remetente', with: "74555427897" 
   end
