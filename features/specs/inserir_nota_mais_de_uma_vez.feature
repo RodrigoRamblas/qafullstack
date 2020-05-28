@@ -6,7 +6,6 @@ Contexto:
 Dado eu estou logado com um usuario valido
 Dado eu coloco a nota fiscal Valida na tela
 
-@Inserir_nota_2
 Cenario: Inserir a NF mais de uma vez
 Quando eu coloco a nota mais de uma vez
 Entao o sistema deve apresentar a msg de "*Esta nota fiscal já foi inserida"

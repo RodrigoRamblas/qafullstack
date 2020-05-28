@@ -10,12 +10,7 @@ Quando("em remetente eu coloco outro CPF") do
     click_button("expand_more")
     page.find(:xpath, encomendas).click
     click_button("Frete")
-    sleep 5
-    puts cpf_cnpj
-    puts "DDDDDDDDDDDD"
-    puts cpf_cnpj_destinatario
     fill_in 'Remetente', with: cpf_cnpj 
-    sleep 500
     #fill_in 'Remetente', with: "74555427807" 
     fill_in 'mat-input-8', with: "Rodrigo"
     fill_in 'Remetente', with: "74555427897" 

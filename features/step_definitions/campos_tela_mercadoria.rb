@@ -65,14 +65,6 @@ Quando("eu clico em {string}") do |declaracao|
     expect(page).to have_content("Dados da cubagem")
     expect(page).to have_content("Metragem cúbica (m3)")
     expect(page).to have_xpath("//div[@class='col-8 pl-0']/app-select-search/button[@class='px-button-select form-control mat-stroked-button']/span[@class='mat-button-wrapper']/div[@class='row m-0 align-items-center']/span[@class='col p-0 px-button-select-text']")
-    # expect(page).to have_xpath("//input[@id='mat-input-66']")
-    # expect(page).to have_xpath("//input[@id='mat-input-67']")
-    # expect(page).to have_xpath("//input[@id='mat-input-68']")
-    # expect(page).to have_xpath("//input[@id='mat-input-69']")
-    # expect(page).to have_xpath("//input[@id='Remetente0']")
-    # expect(page).to have_xpath("//input[@id='mat-input-71']")
-    # expect(page).to have_xpath("//input[@id='Remetente2']")
-    # expect(page).to have_xpath("//input[@id='Remetente3']")
   end                                                                          
 
   Quando("preencho corretamente os campos: {string}, {string}, {string}, {string}") do |produto, quantidade, peso, valor_da_nota|                

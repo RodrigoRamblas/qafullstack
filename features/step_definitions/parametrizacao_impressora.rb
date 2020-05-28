@@ -5,7 +5,7 @@ Dado("que estou na tela de Configuração do usuário") do
   sleep 3
   click_button("Parametrizações")
   sleep 3
-  configuracoes_usuario = "//div[contains(text(),'Configurações de usuário')]"
+  configuracoes_usuario = "//div[contains(text(),'Configurações do Usuário')]"
   page.find(:xpath, configuracoes_usuario).click
 end                                                                          
 
